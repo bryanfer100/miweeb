@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú Principal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .menu {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+      background: #111;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1), 0 0 40px rgba(255,255,255,0.05) inset;
+      text-align: center;
+      animation: glowBorder 3s infinite alternate;
+    }
+
+    @keyframes glowBorder {
+      from {
+        box-shadow: 0 0 15px rgba(255,255,255,0.1), 0 0 30px rgba(255,255,255,0.05) inset;
+      }
+      to {
+        box-shadow: 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,255,255,0.1) inset;
+      }
+    }
+
+    .menu h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: white;
+      text-shadow: 0 0 15px white;
+    }
+
+    .menu h3 {
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .menu a {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 0 10px white;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu a:hover {
+      background-color: white;
+      color: black;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px white;
+    }
+
+    .menu a::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+      transform: rotate(45deg);
+      animation: energyFlow 4s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes energyFlow {
+      0% { transform: rotate(0deg) scale(1); opacity: 0.3; }
+      100% { transform: rotate(360deg) scale(1.2); opacity: 0.1; }
+    }
+
+    .menu a span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      .menu {
+        padding: 20px;
+      }
+
+      .menu h1 {
+        font-size: 28px;
+      }
+
+      .menu a {
+        font-size: 14px;
+      }
+
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h1>Menú de Páginas</h1>
+    <h3>Bryan Fernando Pool Granguillhome - Grupo: 408 Informática</h3>
+
+    <div class="button-grid">
+      <a href="./pagina1Bootstrap/youtube-bootstrap-master/index.html"><span>Página 1 - Bootstrap</span></a>
+      <a href="./pagina2/index.html"><span>Página 2</span></a>
+      <a href="./Pagina3/index.html"><span>Página 3</span></a>
+      <a href="./pagina4/PAGINA WEB DESDE CERO/index.html"><span>Página 4</span></a>
+      <a href="./LocalStorage/crud-js-localStorage-master/index.html"><span>Página 5 - LocalStorage</span></a>
+    </div>
+  </div>
+</body>
+</html>
